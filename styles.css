@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  color: #00695c;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Loading Animation */
+#loading-animation {
+  margin-top: 20%;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: #ff5252;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #ff5252;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -25px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Access Code Interface */
+#access-code-interface {
+  margin-top: 20%;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #00695c;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #00695c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Thank You Animation */
+#thank-you {
+  margin-top: 20%;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Main Interface */
+#main-interface {
+  padding: 20px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 2rem;
+}
+
+/* Feature Containers */
+.feature {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Health Tips */
+#tips-list {
+  text-align: left;
+}
+
+.tip {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* About Section */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #00695c;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #004d40;
+}

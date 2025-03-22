@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthPro Checkup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div id="loading-animation">
+    <div class="heart"></div>
+    <p>Loading HealthPro Checkup...</p>
+  </div>
+
+  <!-- Access Code Interface -->
+  <div id="access-code-interface" class="hidden">
+    <h1>Welcome to HealthPro Checkup</h1>
+    <input type="text" id="access-code" placeholder="Enter Access Code">
+    <button onclick="checkAccessCode()">Submit</button>
+    <p id="error-message" class="hidden">Invalid Access Code!</p>
+  </div>
+
+  <!-- Thank You Animation -->
+  <div id="thank-you" class="hidden">
+    <h1>Thank You!</h1>
+    <p>Welcome to HealthPro Checkup. Enjoy your health journey!</p>
+  </div>
+
+  <!-- Main App Interface -->
+  <div id="main-interface" class="hidden">
+    <h1>HealthPro Checkup</h1>
+    <div class="icon-container">
+      <div class="icon" onclick="openFeature('bmi')">
+        <i class="fas fa-weight"></i>
+        <p>BMI</p>
+      </div>
+      <div class="icon" onclick="openFeature('age')">
+        <i class="fas fa-birthday-cake"></i>
+        <p>Age</p>
+      </div>
+      <div class="icon" onclick="openFeature('height')">
+        <i class="fas fa-ruler-vertical"></i>
+        <p>Height</p>
+      </div>
+      <div class="icon" onclick="openFeature('diet')">
+        <i class="fas fa-utensils"></i>
+        <p>Diet</p>
+      </div>
+      <div class="icon" onclick="openFeature('health-tips')">
+        <i class="fas fa-lightbulb"></i>
+        <p>Health Tips</p>
+      </div>
+      <div class="icon" onclick="openFeature('about')">
+        <i class="fas fa-info-circle"></i>
+        <p>About</p>
+      </div>
+    </div>
+
+    <!-- Feature Containers -->
+    <div id="bmi" class="feature hidden">
+      <h2>BMI Calculator</h2>
+      <input type="number" id="height-input" placeholder="Height (cm)">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <p id="bmi-result"></p>
+      <p id="bmi-tips"></p>
+    </div>
+
+    <div id="age" class="feature hidden">
+      <h2>Age Calculator</h2>
+      <input type="date" id="birthdate">
+      <button onclick="calculateAge()">Calculate Age</button>
+      <p id="age-result"></p>
+    </div>
+
+    <div id="height" class="feature hidden">
+      <h2>Height Converter</h2>
+      <input type="number" id="feet" placeholder="Feet">
+      <input type="number" id="inches" placeholder="Inches">
+      <button onclick="convertHeight()">Convert to CM</button>
+      <p id="height-result"></p>
+    </div>
+
+    <div id="diet" class="feature hidden">
+      <h2>Diet Chart</h2>
+      <input type="number" id="diet-age" placeholder="Age">
+      <select id="diet-type">
+        <option value="vegetarian">Vegetarian</option>
+        <option value="non-vegetarian">Non-Vegetarian</option>
+      </select>
+      <button onclick="suggestDiet()">Get Diet Chart</button>
+      <div id="diet-suggestion"></div>
+    </div>
+
+    <div id="health-tips" class="feature hidden">
+      <h2>Health Tips</h2>
+      <div id="tips-list"></div>
+    </div>
+
+    <div id="about" class="feature hidden">
+      <h2>About</h2>
+      <p>This is the beta version of HealthPro Checkup.</p>
+      <p>This app is made by <strong>Ahmed Minhaz</strong>.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/minhaz404.info" target="_blank"><i class="facebook"></i></a>
+        <a href="https://www.instagram.com/minhaz_incoming" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:minhazceo@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
